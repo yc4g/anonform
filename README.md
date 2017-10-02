@@ -41,7 +41,9 @@ Install flask using the Python package manager, pip. You already have pip if
 your machine's version of Python is Python 2 >=2.7.9 or Python 3 >=3.4.
 Otherwise, install pip using the instructions found
 [here](https://pip.pypa.io/en/stable/installing/).
-```$ pip install Flask```
+```
+$ pip install Flask
+```
 
 ### Files
 
@@ -73,9 +75,13 @@ frontend files.
 
 ### Running the app
 If the code that launches your server is in `app.py`, you can host it by doing
-``python app.py``
+```
+$ python app.py
+```
 or just
-``./app.py`` if you have Python in your path (check by running `echo $PATH`)
+```
+$ ./app.py
+``` if you have Python in your path (check by running `echo $PATH`)
 and don't delete my shebang in the file (it's the first line that says
 `#!/usr/bin/env python`). If successful, you should see something like 
 ```
