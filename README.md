@@ -49,18 +49,18 @@ In this repo is a skeleton Flask server, `app.py`, to give you a basic sense
 of how things should be laid out. Right now, this repo is empty, but once
 everything is set up your directory should end up looking something like this:
 .
-├── .gitignore
-├── README.md
-├── app.py
-├── scrapethatpage.py
-├── funpythonfiles.py
-├── static
-│   ├── somefile.pdf
-│   └── staticfile.js
-│   └── infoinfoinfo.txt
-└── templates
-    ├── index.html
-    └── styles.css
+├── .gitignore  
+├── README.md  
+├── app.py  
+├── scrapethatpage.py  
+├── funpythonfiles.py  
+├── static  
+│   ├── somefile.pdf  
+│   └── staticfile.js  
+│   └── infoinfoinfo.txt  
+└── templates  
+    ├── index.html  
+    └── styles.css  
 
 All the Python server files should be at the root directory. The `static` and
 `templates` folders are special folders that Flask will serve for different
@@ -93,7 +93,7 @@ something like
 - [How do I scrape that page with the messages?](http://docs.python-guide.org/en/latest/scenarios/scrape/)
 - [How do I get all the files in this repo onto my computer?](https://help.github.com/articles/fork-a-repo/)
 - [How do I set up my SSH keys so I can push/pull to the remote repo without having to enter my password every damn time?](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-- [Can I see an example of a fully fleshed out Flask app? Sure can](https://github.com/pallets/flask/tree/master/examples/flaskr/)
+- [Can I see an example of a fully fleshed out Flask app?](https://github.com/pallets/flask/tree/master/examples/flaskr/)
 - [How do I navigate code in Vim, the greatest editor known to humankind?](https://vim-adventures.com/)
 
 ### Still unsatisfied?
