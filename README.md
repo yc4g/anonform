@@ -1,4 +1,4 @@
-### Overview
+## Overview
 I know I said during the tech meeting that both tech teams would be working on
 the same project and each do roughly half the work, but I changed my mind.
 We're going to have both of the teams do the same project, but it's going to be
@@ -47,8 +47,8 @@ Otherwise, install pip using the instructions found
 
 In this repo is a skeleton Flask server, `app.py`, to give you a basic sense
 of how things should be laid out. Right now, this repo is empty, but once
-everything is set up your directory should end up looking something like this:
-.
+everything is set up your directory should end up looking something like this:  
+.  
 ├── .gitignore  
 ├── README.md  
 ├── app.py  
