@@ -81,7 +81,8 @@ $ python app.py
 or just
 ```
 $ ./app.py
-``` if you have Python in your path (check by running `echo $PATH`)
+```
+if you have Python in your path (check by running `echo $PATH`)
 and don't delete my shebang in the file (it's the first line that says
 `#!/usr/bin/env python`). If successful, you should see something like 
 ```
