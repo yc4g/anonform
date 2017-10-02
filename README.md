@@ -49,20 +49,8 @@ $ pip install Flask
 
 In this repo is a skeleton Flask server, `app.py`, to give you a basic sense
 of how things should be laid out. Right now, this repo is empty, but once
-everything is set up your directory should end up looking something like this:  
-.  
-├── .gitignore  
-├── README.md  
-├── app.py  
-├── scrapethatpage.py  
-├── funpythonfiles.py  
-├── static  
-│   ├── somefile.pdf  
-│   └── staticfile.js  
-│   └── infoinfoinfo.txt  
-└── templates  
-    ├── index.html  
-    └── styles.css  
+everything is set up your directory should end up looking something like 
+[this](https://ptpb.pw/bSga).
 
 All the Python server files should be at the root directory. The `static` and
 `templates` folders are special folders that Flask will serve for different
