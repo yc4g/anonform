@@ -41,7 +41,7 @@ Install flask using the Python package manager, pip. You already have pip if
 your machine's version of Python is Python 2 >=2.7.9 or Python 3 >=3.4.
 Otherwise, install pip using the instructions found
 [here](https://pip.pypa.io/en/stable/installing/).
-``$ pip install Flask``
+```$ pip install Flask```
 
 ### Files
 
