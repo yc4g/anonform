@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 from flask import Flask, flash, redirect, render_template, request, session, \
 abort, url_for
-#from lxml import html 
+from lxml import html 
+import requests
 from twilio.rest import Client
 
 app = Flask(__name__)
@@ -15,7 +16,7 @@ client = Client(account_sid, auth_token)
 @app.route("/", methods=["POST", "GET"])
 def hello():
 	if request.method == "POST":
-   		return redirect(url_for('sms', message_body=request.form["msg"]))
+   		return redirect(url_for('modal', message_body=request.form["msg"]))
    	else:
    		return render_template('index.html')
 
@@ -28,8 +29,30 @@ def sms(message_body):
 	    body=message_body)
 	return "Message Sent! Here is the body: " + message.body
 
+@app.route("/modal/<message_body>")
+def modal(message_body):
 
+	message = client.messages.create(
+	    to="+19292849804",
+	    from_="+15005550006",
+	    body=message_body)
 
+	return render_template('modal.html', message_body=message_body)
+
+@app.route("/scrape")
+def scrape():
+	page = requests.get('http://echenran.pythonanywhere.com/c4gdata')
+	tree = html.fromstring(page.content)
+	#This will create a list of buyers:
+	recipients = tree.xpath('//div[@title="recipient"]/text()')
+	#This will create a list of prices
+	messages = tree.xpath('//span[@class="message"]/text()')
+
+	f = open('data.txt', 'w')
+	f.write('Recipient: '.join(recipients))
+
+	f.write('\n')
+	return 'Recipients: '.join(recipients)
 '''
 @app.route("scrap")
 def scrap():
