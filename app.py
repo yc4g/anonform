@@ -17,7 +17,7 @@ client = Client(account_sid, auth_token)
 def hello():
 	if request.method == "POST":
    		return redirect(url_for('modal', message_body=request.form["msg"]))
-   	else:
+	else:
    		return render_template('index.html')
 
 @app.route("/sms/<message_body>")
