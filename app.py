@@ -12,18 +12,21 @@ account_sid = "ACf211000f1e2bdf7ad833b9eaf541dc75"
 auth_token  = "5a6ab79b242b9d4fdc8a3ea22d3f4a7a"
 client = Client(account_sid, auth_token)
 
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def hello():
-    return "Hello World!"
+	if request.method == "POST":
+   		return redirect(url_for('sms', message_body=request.form["msg"]))
+   	else:
+   		return render_template('index.html')
 
-@app.route("/sms")
-def sms():
-	
+@app.route("/sms/<message_body>")
+def sms(message_body):
+
 	message = client.messages.create(
 	    to="+19292849804",
 	    from_="+15005550006",
-	    body="This is the ship that made the Kessel Run in fourteen parsecs?")
-	return "Message Sent!" + message.sid
+	    body=message_body)
+	return "Message Sent! Here is the body: " + message.body
 
 
 
