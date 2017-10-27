@@ -1,3 +1,22 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @katsun14
+ Sign out
+ Unwatch 2
+  Star 0  Fork 2 htownley/anonform
+forked from yc4g/anonform
+ Code  Pull requests 0  Projects 0  Wiki  Insights
+Branch: master Find file Copy pathanonform/app.py
+9d17591  6 minutes ago
+@nverma1 nverma1 Update app.py
+3 contributors @nverma1 @htownley @echenran
+RawBlameHistory     
+Executable File  90 lines (69 sloc)  2.36 KB
 #!/usr/bin/env python
 from flask import Flask, flash, redirect, render_template, request, session, \
 abort, url_for
@@ -17,7 +36,7 @@ client = Client(account_sid, auth_token)
 def hello():
 	if request.method == "POST":
    		return redirect(url_for('modal', message_body=request.form["msg"]))
-   	else:
+	else:
    		return render_template('index.html')
 
 @app.route("/sms/<message_body>")
@@ -54,10 +73,23 @@ def scrape():
 	f.write('\n')
 	return 'Recipients: '.join(recipients)
 
-#Katherine's page :)
+
+# Henry's page
+@app.route("/henry")
+def henry():
+
+	return render_template('henry.html')
+
+# Neha's page
+@app.route("/neha")
+def neha():
+
+	return render_template('neha.html')
+
+#Katherine's page
 @app.route("/katherine")
 def katherine():
-	return "This is Katherine's page!"
+
 	return render_template('katherine.html')
 '''
 @app.route("scrap")
@@ -77,3 +109,15 @@ if __name__ == "__main__":
     # 5000 on localhost, which you can access by pointing your browser to
     # `localhost:5000`, `127.0.0.1:5000`, or `0.0.0.0:5000`.
     app.run(host='0.0.0.0', port=5000)
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
