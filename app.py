@@ -61,18 +61,9 @@ def henry():
 
 	return render_template('henry.html')
 
-# Neha's page
-@app.route("/neha")
-def neha():
-
-	return render_template('neha.html')
-
-
-# Katherine's page
-@app.route("/katherine")
-def katherine():
-
-	return render_template('katherine.html')
+@app.route("/william")
+def william():
+	return render_template('william.html')
 
 '''
 @app.route("scrap")
@@ -85,6 +76,8 @@ def scrap():
 	prices = tree.xpath('//span[@class="item-price"]/text()')
 	print 'Buyers: ', buyers
 	print 'Prices: ', prices
+
+
 '''
 
 if __name__ == "__main__":
