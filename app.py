@@ -58,7 +58,7 @@ def scrape():
 # Henry's page
 @app.route("/henry")
 def henry():
-	return "Hello, World. This is my page."
+
 	return render_template('henry.html')
 
 '''
