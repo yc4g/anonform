@@ -17,7 +17,7 @@ client = Client(account_sid, auth_token)
 def hello():
 	if request.method == "POST":
    		return redirect(url_for('modal', message_body=request.form["msg"]))
-	else:
+   	else:
    		return render_template('index.html')
 
 @app.route("/sms/<message_body>")
@@ -54,13 +54,11 @@ def scrape():
 	f.write('\n')
 	return 'Recipients: '.join(recipients)
 
-
-# Henry's page
-@app.route("/henry")
-def henry():
-	return "Hello, World. This is my page."
-	return render_template('henry.html')
-
+#Katherine's page :)
+@app.route("/katherine")
+def katherine():
+	return "This is Katherine's page!"
+	return render_template('katherine.html')
 '''
 @app.route("scrap")
 def scrap():
@@ -72,8 +70,6 @@ def scrap():
 	prices = tree.xpath('//span[@class="item-price"]/text()')
 	print 'Buyers: ', buyers
 	print 'Prices: ', prices
-
-
 '''
 
 if __name__ == "__main__":
