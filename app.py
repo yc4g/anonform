@@ -67,6 +67,13 @@ def neha():
 
 	return render_template('neha.html')
 
+
+# Katherine's page
+@app.route("/katherine")
+def katherine():
+
+	return render_template('katherine.html')
+
 '''
 @app.route("scrap")
 def scrap():
@@ -78,8 +85,6 @@ def scrap():
 	prices = tree.xpath('//span[@class="item-price"]/text()')
 	print 'Buyers: ', buyers
 	print 'Prices: ', prices
-
-
 '''
 
 if __name__ == "__main__":
